@@ -2,6 +2,15 @@
 // This is CODE, lets you control your character with code.
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
+test = (name) =>{
+	return $.ajax('https://raw.githubusercontent.com/Otwald/Adventure-Land/master/' + name, {
+		type: 'Get',
+		dataType: "script",
+		async: false,
+		cache: true
+	});
+}
+
 const name = window.character.name;
 window.game_log('Alrinea loop');
 const party = ['Rukja', 'Alrinea', 'Umeko'];
@@ -47,11 +56,3 @@ main = (name, party) => {
 
 main(name, party);
 
-test = (name) =>{
-	return $.ajax('https://raw.githubusercontent.com/Otwald/Adventure-Land/master/' + name, {
-		type: 'Get',
-		dataType: "script",
-		async: false,
-		cache: true
-	});
-}
