@@ -12,9 +12,10 @@ required = (name) => {
 }
 
 const name = window.character.name;
-window.game_log('Alrinea loop');
 const party = ['Rukja', 'Alrinea', 'Umeko'];
 const alrinea = required('alrinea');
+console.log(alrinea)
+console.log(typeof(alrinea))
 const otwald = required('otwald');
 const umeko = required('umeko');
 const rukja = required('rukja');
