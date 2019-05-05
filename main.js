@@ -5,10 +5,10 @@
 const name = window.character.name;
 window.game_log('Alrinea loop');
 const party = ['Rukja', 'Alrinea', 'Umeko'];
-import alrinea from './alrinea';
-import otwald from './otwald';
-import umeko from './umeko';
-import rukja from './rukja';
+// import alrinea from './alrinea';
+// import otwald from './otwald';
+// import umeko from './umeko';
+// import rukja from './rukja';
 // load_code("party_build");
 // load_code("wrapper_action");
 // load_code("chat_command");
@@ -38,7 +38,7 @@ main = (name, party) => {
 			rukja.handle();
 			break;
 	}
-	performance_trick()
+	performance_trick();
 
 } // Loops every 1/4 seconds.
 
