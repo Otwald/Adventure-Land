@@ -3,7 +3,7 @@
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
 const name = window.character.name;
-game_log('Alrinea loop');
+window.game_log('Alrinea loop');
 const party = ['Rukja', 'Alrinea', 'Umeko'];
 import alrinea from './alrinea';
 import otwald from './otwald';
