@@ -3,23 +3,22 @@
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
 
-umeko=(party)=>{
+umeko = (party) => {
 	var party_obj = get_party(party);
 	var command = null
 	var old_com = null
-	setInterval(function(){
-		var party_obj = get_party(party);
-		if(character.party == 'Otwald'){
+	setInterval(function () {
+		if (character.party == 'Otwald') {
 			var open = group_heal(party_obj)
-			if( old_com != voice_command()) {
+			if (old_com != voice_command()) {
 				command = voice_command();
 				old_com = command;
 			}
 			emergency_check()
-			switch(command){
+			switch (command) {
 				case 'fight':
 					open = (open.length == 0 ? true : false);
-					if(open){
+					if (open) {
 						base_attack(open);
 					}
 					break;
@@ -30,7 +29,7 @@ umeko=(party)=>{
 					command = null;
 					break;
 				case 'gold':
-					send_gold('Otwald',character.gold);
+					send_gold('Otwald', character.gold);
 					command = null;
 					break;
 				case 'trade':
@@ -42,6 +41,6 @@ umeko=(party)=>{
 					command = null;
 					break;
 			}
-		}else{rejoin_party()}
-	},1000/4);
+		} else { rejoin_party() }
+	}, 1000 / 4);
 };
