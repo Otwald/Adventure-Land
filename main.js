@@ -3,20 +3,19 @@
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
 const name = character.name;
+game_log(name);
 const party = ['Rukja', 'Alrinea', 'Umeko'];
-import alrinea from './alrinea';
-import otwald from './otwald';
-import umeko from './umeko';
-import rukja from './rukja';
-load_code("party_build");
-load_code("wrapper_action");
-load_code("chat_command");
-load_code(2);
-load_code(3);
-load_code(4);
-load_code(5);
-
-loadLink(base_url);
+import alrinea from 'https://raw.githubusercontent.com/Otwald/Adventure-Land/master/alrinea';
+// import otwald from './otwald';
+// import umeko from './umeko';
+// import rukja from './rukja';
+// load_code("party_build");
+// load_code("wrapper_action");
+// load_code("chat_command");
+// load_code(2);
+// load_code(3);
+// load_code(4);
+// load_code(5);
 
 main = (name, party) => {
 
