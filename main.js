@@ -4,7 +4,10 @@
 // Just set attack_mode to true and ENGAGE!
 const name = character.name;
 const party = ['Rukja', 'Alrinea', 'Umeko'];
-var char = require('./'+name);
+import alrinea from './alrinea';
+import otwald from './otwald';
+import umeko from './umeko';
+import rukja from './rukja';
 load_code("party_build");
 load_code("wrapper_action");
 load_code("chat_command");
@@ -20,20 +23,20 @@ main = (name, party) => {
 	//base_attack(true);
 	switch (name) {
 		case 'Alrinea':
-			game_log('Alrinea loop2');
-			char.alrinea();
+			game_log('Alrinea loop');
+			alrinea.handle();
 			break;
 		case 'Otwald':
 			game_log('Otwald loop');
-			char.otwald(party);
+			otwald.handle(party);
 			break;
 		case 'Umeko':
 			game_log('Umeko loop');
-			char.umeko(party);
+			umeko.handle(party);
 			break;
 		case 'Rukja':
 			game_log('Rukja loop');
-			char.rukja();
+			rukja.handle();
 			break;
 	}
 	performance_trick()
