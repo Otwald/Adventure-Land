@@ -5,7 +5,10 @@
 const name = window.character.name;
 window.game_log('Alrinea loop');
 const party = ['Rukja', 'Alrinea', 'Umeko'];
-// import alrinea from './alrinea';
+var alrinea = test('alrinea');
+var otwald = test('otwald');
+var umeko = test('umeko');
+var rukja = test('rukja');
 // import otwald from './otwald';
 // import umeko from './umeko';
 // import rukja from './rukja';
@@ -43,3 +46,12 @@ main = (name, party) => {
 } // Loops every 1/4 seconds.
 
 main(name, party);
+
+test = (name) =>{
+	return $.ajax('https://raw.githubusercontent.com/Otwald/Adventure-Land/master/' + name, {
+		type: 'Get',
+		dataType: "script",
+		async: false,
+		cache: true
+	});
+}
