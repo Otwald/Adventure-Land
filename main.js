@@ -29,7 +29,7 @@ var resp = getHash().then((data) => {
 
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp + '/' + name + '.js'
-console.log(typeof (resp))
+console.log(resp)
 
 
 
@@ -37,9 +37,6 @@ const otwald = loadScript(baseUrl).then((data) => {
 	console.log(data)
 	return data
 });
-console.log(otwald);
-console.log(typeof (otwald));
-
 main = (name, party = []) => {
 
 	//base_attack(true);
