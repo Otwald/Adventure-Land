@@ -43,5 +43,5 @@ main = (name, party = []) => {
 
 } // Loops every 1/4 seconds.
 
-main(name, party);
+main(name);
 
