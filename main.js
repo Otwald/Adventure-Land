@@ -13,12 +13,15 @@ required = (name) => {
 
 const base_url = 'https://raw.githubusercontent.com/Otwald/Adventure-Land/master'
 
+var test;
+
 loadLink = (url) => {
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("GET", url, true);
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
-			var script = this.response
+			var script = this.response;
+			test = script;
 			eval.apply(window, [script])
 		}
 	};
@@ -28,6 +31,7 @@ const name = window.character.name;
 
 loadLink(base_url + name + '.js');
 
+console.log(test);
 
 const party = ['Rukja', 'Alrinea', 'Umeko'];
 const alrinea = required('alrinea');
