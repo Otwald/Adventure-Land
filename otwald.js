@@ -1,4 +1,4 @@
-class otwald {
+class Otwald {
 
 	find_item = (name) => {
 		var inventar = character.items
