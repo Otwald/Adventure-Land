@@ -14,17 +14,17 @@ function loadScript(baseUrl) {
 let name = 'otwald';
 // loadScript(name)
 
-function getHash() {
-	const result = $.ajax('https://api.github.com/repos/Otwald/Adventure-Land/commits/master', {
-		type: 'Get',
-		dataType: "json",
-		cache: true,
-		async: false
-	});
-	return result
-}
+// function getHash() {
+// 	const result = $.ajax('https://api.github.com/repos/Otwald/Adventure-Land/commits/master', {
+// 		type: 'Get',
+// 		dataType: "json",
+// 		cache: true,
+// 		async: false
+// 	});
+// 	return result
+// }
 
-var resp = getHash()
+// var resp = getHash()
 
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp.responseJSON.sha + '/' + name + '.js'
