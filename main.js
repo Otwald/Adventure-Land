@@ -5,7 +5,7 @@
 function loadScript(baseUrl) {
 	return $.ajax(baseUrl, {
 		type: 'Get',
-		dataType: "script",
+		dataType: "json",
 		cache: true,
 		async: false
 	});
