@@ -2,13 +2,13 @@
 // This is CODE, lets you control your character with code.
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
-async function loadScript(baseUrl) {
-	const result = await $.ajax(baseUrl, {
+function loadScript(baseUrl) {
+	return $.ajax(baseUrl, {
 		type: 'Get',
 		dataType: "script",
-		cache: true
+		cache: true,
+		async: false
 	});
-	return result
 }
 
 let name = 'otwald';
@@ -29,10 +29,10 @@ var resp = getHash()
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp.responseJSON.sha + '/' + name + '.js'
 
-const otwald = loadScript(baseUrl).then((data) => {
-	data.handle()
-	return data
-});
+const otwald = loadScript(baseUrl);
+console.log(otwald);
+otwald.handle()
+var person = new otwald();
 
 // var person = new otwald();
 // person.handle();
