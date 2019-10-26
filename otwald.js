@@ -1,4 +1,4 @@
-export class Otwald {
+class Otwald {
 
 	find_item = (name) => {
 		var inventar = character.items
