@@ -29,11 +29,14 @@ let name = 'otwald';
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp.responseJSON.sha + '/' + name + '.js'
 
-const response = loadScript(baseUrl);
-console.log(response);
-var person = '"(' + response.responseText + ')"'
+loadlink(baseUrl);
+const person = new Otwald();
 console.log(person);
-console.log(eval(person))
+// const response = loadScript(baseUrl);
+// console.log(response);
+// var person = '"(' + response.responseText + ')"'
+// console.log(person);
+// console.log(eval(person))
 // console.log(person);
 // otwald.handle()
 // var person = JSON.parse(otwald.responseText);
