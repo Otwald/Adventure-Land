@@ -3,12 +3,11 @@
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
 async function loadScript (name){
-	const result = await $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
+	return $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
 		type: 'Get',
 		dataType: "script",
 		cache: true
 	});
-	return result
 }
 
 let name = 'otwald';
