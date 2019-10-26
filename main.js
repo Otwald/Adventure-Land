@@ -17,7 +17,8 @@ let name = 'otwald';
 async function getHash() {
 	const result = await $.ajax('https://api.github.com/repos/Otwald/Adventure-Land/commits/master', {
 		type: 'Get',
-		dataType: "json"
+		dataType: "json",
+		cache: true
 	});
 	return result
 }
