@@ -2,16 +2,16 @@
 // This is CODE, lets you control your character with code.
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
-required = (name) => {
-	return $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
-		type: 'Get',
-		dataType: "script",
-		async: false,
-		cache: true
-	});
-}
+// required = (name) => {
+// 	return $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
+// 		type: 'Get',
+// 		dataType: "script",
+// 		async: false,
+// 		cache: true
+// 	});
+// }
 
-const base_url = 'https://raw.githubusercontent.com/Otwald/Adventure-Land/master'
+const base_url = 'https://raw.githubusercontent.com/Otwald/Adventure-Land/master/'
 
 var test;
 
