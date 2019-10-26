@@ -1,6 +1,6 @@
 // import party_managment from './party_managment';
 
-export class otwald {
+class otwald {
 	constructor(){
 		const pm = party_managment;
 	}
