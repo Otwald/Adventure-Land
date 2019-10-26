@@ -18,6 +18,9 @@ async function main(resp) {
 
 	const res = await loadScript(baseUrl);
 	console.log(res);
+	console.log(typeof(res));
+	var person = new Otwald();
+	person.handle();
 	// const person = new Otwald();
 	// console.log(person);
 	// const response = loadScript(baseUrl);
