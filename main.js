@@ -25,18 +25,11 @@ function getHash() {
 }
 
 var resp = getHash()
-// .then((data) => {
-// 	return data
-// })
 
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
-	+ resp + '/' + name + '.js'
-console.log(resp)
-
-
+	+ resp.responseJSON.sha + '/' + name + '.js'
 
 const otwald = loadScript(baseUrl).then((data) => {
-	console.log(data)
 	return data
 });
 main = (name, party = []) => {
