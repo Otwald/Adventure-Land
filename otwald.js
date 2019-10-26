@@ -1,4 +1,4 @@
-window.Otwald = class Otwald {
+class Otwald {
 
 	find_item = (name) => {
 		var inventar = character.items
