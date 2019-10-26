@@ -15,8 +15,10 @@ let name = 'otwald';
 // loadScript(name)
 
 const otwald = loadScript(name).then((data) => {return data});
+console.log(otwald);
+console.log(typeof(otwald));
 
-main = (name, party) => {
+main = (name, party = []) => {
 
 	//base_attack(true);
 	switch (name) {
