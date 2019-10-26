@@ -29,17 +29,18 @@ loadLink = (url) => {
 }
 const name = window.character.name;
 
-loadLink(base_url + name + '.js');
+loadLink(base_url + name.toLowerCase() + '.js');
 
 console.log(test);
 
 const party = ['Rukja', 'Alrinea', 'Umeko'];
-const alrinea = required('alrinea')();
+const alrinea = required('alrinea');
 console.log(alrinea)
 console.log(typeof(alrinea))
-const otwald = required('otwald')();
-const umeko = required('umeko')();
-const rukja = required('rukja')();
+let otwald = required('otwald');
+otwald = new otwald();
+let umeko = required('umeko');
+let rukja = required('rukja');
 console.log(otwald);
 // import otwald from './otwald';
 // import umeko from './umeko';
