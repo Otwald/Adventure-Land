@@ -2,11 +2,10 @@
 // This is CODE, lets you control your character with code.
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
-loadScript = (name) => {
+async function loadScript (name){
 	const result = await $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
 		type: 'Get',
 		dataType: "script",
-		async: false,
 		cache: true
 	});
 	return result
