@@ -32,29 +32,29 @@ const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 const otwald = loadScript(baseUrl).then((data) => {
 	return data
 });
-main = (name, party = []) => {
+// main = (name, party = []) => {
 
-	//base_attack(true);
-	switch (name) {
-		case 'Alrinea':
-			game_log('Alrinea loop');
-			alrinea.handle();
-			break;
-		case 'Otwald':
-			game_log('Otwald loop');
-			otwald.handle(party);
-			break;
-		case 'Umeko':
-			game_log('Umeko loop');
-			umeko.handle(party);
-			break;
-		case 'Rukja':
-			game_log('Rukja loop');
-			rukja.handle();
-			break;
-	}
-	performance_trick();
+// 	//base_attack(true);
+// 	switch (name) {
+// 		case 'Alrinea':
+// 			game_log('Alrinea loop');
+// 			alrinea.handle();
+// 			break;
+// 		case 'Otwald':
+// 			game_log('Otwald loop');
+// 			otwald.handle(party);
+// 			break;
+// 		case 'Umeko':
+// 			game_log('Umeko loop');
+// 			umeko.handle(party);
+// 			break;
+// 		case 'Rukja':
+// 			game_log('Rukja loop');
+// 			rukja.handle();
+// 			break;
+// 	}
+// 	performance_trick();
 
-} // Loops every 1/4 seconds.
+// } // Loops every 1/4 seconds.
 
-main(name);
+// main(name);
