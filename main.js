@@ -1,17 +1,11 @@
-// Hey there!
-// This is CODE, lets you control your character with code.
-// If you don't know how to code, don't worry, It's easy.
-// Just set attack_mode to true and ENGAGE!
-
 async function main(resp) {
 
 
 	async function loadScript(baseUrl) {
 		const result = await $.ajax(baseUrl, {
 			type: 'Get',
-			dataType: "text",
+			dataType: "script",
 			cache: true,
-			async: false
 		});
 		return result;
 	}
