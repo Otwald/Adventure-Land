@@ -14,19 +14,20 @@ async function loadScript(baseUrl) {
 let name = 'otwald';
 // loadScript(name)
 
-async function getHash() {
-	const result = await $.ajax('https://api.github.com/repos/Otwald/Adventure-Land/commits/master', {
+function getHash() {
+	const result = $.ajax('https://api.github.com/repos/Otwald/Adventure-Land/commits/master', {
 		type: 'Get',
 		dataType: "json",
-		cache: true
+		cache: true,
+		async: false
 	});
 	return result
 }
 
-var resp = getHash().then((data) => {
-	console.log(data)
-	return data.commit.tree.sha
-})
+var resp = getHash()
+// .then((data) => {
+// 	return data
+// })
 
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp + '/' + name + '.js'
