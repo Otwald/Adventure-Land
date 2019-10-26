@@ -1,7 +1,4 @@
 class otwald {
-	constructor() {
-		const pm = party_managment;
-	}
 
 	find_item = (name) => {
 		var inventar = character.items
@@ -63,8 +60,6 @@ class otwald {
 
 	handle = (party) => {
 		var party_obj = pm.get_party(party);
-		//var sell = ["helmet","shoes","gloves","pants", "coat", "blade", "claw", "staff",
-		//"bow","wshield"]
 		var sell = ["helmet", "shoes", "gloves", "pants", "coat", "blade", "claw", "staff"]
 		var upgrade = true
 		var item = null
