@@ -34,12 +34,12 @@ loadLink(base_url + name + '.js');
 console.log(test);
 
 const party = ['Rukja', 'Alrinea', 'Umeko'];
-const alrinea = required('alrinea');
+const alrinea = required('alrinea')();
 console.log(alrinea)
 console.log(typeof(alrinea))
-const otwald = required('otwald');
-const umeko = required('umeko');
-const rukja = required('rukja');
+const otwald = required('otwald')();
+const umeko = required('umeko')();
+const rukja = required('rukja')();
 console.log(otwald);
 // import otwald from './otwald';
 // import umeko from './umeko';
