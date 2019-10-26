@@ -2,8 +2,8 @@
 // This is CODE, lets you control your character with code.
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
-async function loadScript (name){
-	const result = await $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
+async function loadScript(baseUrl) {
+	const result = await $.ajax(baseUrl, {
 		type: 'Get',
 		dataType: "script",
 		cache: true
@@ -14,9 +14,25 @@ async function loadScript (name){
 let name = 'otwald';
 // loadScript(name)
 
-const otwald = loadScript(name).then((data) => {return data});
+async function getHash() {
+	const result = await $.ajax('https://api.github.com/repos/Otwald/Adventure-Land/commits/master', {
+		type: 'Get',
+		dataType: "json"
+	});
+	return result
+}
+
+var resp = getHash().then((data) => { return data.commit.tree.sha })
+
+const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
+	+ resp + '/' + name + '.js'
+console.log(typeof (resp))
+
+
+
+const otwald = loadScript(baseUrl).then((data) => { return data });
 console.log(otwald);
-console.log(typeof(otwald));
+console.log(typeof (otwald));
 
 main = (name, party = []) => {
 
@@ -43,5 +59,5 @@ main = (name, party = []) => {
 
 } // Loops every 1/4 seconds.
 
+console.log(resp.commit.tree.sha)
 main(name);
-
