@@ -28,17 +28,14 @@ loadScriptSync('otwald')
 // // otwald = new otwald();
 // let umeko = required('umeko');
 // let rukja = required('rukja');
-console.log(otwald);
+// console.log(otwald);
+const otwald = new otwald();
 // import otwald from './otwald';
 // import umeko from './umeko';
 // import rukja from './rukja';
 // load_code("party_build");
 // load_code("wrapper_action");
 // load_code("chat_command");
-// load_code(2);
-// load_code(3);
-// load_code(4);
-// load_code(5);
 
 main = (name, party) => {
 

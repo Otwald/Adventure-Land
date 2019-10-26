@@ -1,8 +1,8 @@
-import party_managment from './party_managment';
-const pm = party_managment;
-export default class otwald {
+// import party_managment from './party_managment';
+
+class otwald {
 	constructor(){
-		
+		const pm = party_managment;
 	}
 
 	find_item = (name) => {
