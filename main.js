@@ -30,6 +30,8 @@ const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp.responseJSON.sha + '/' + name + '.js'
 
 const otwald = loadScript(baseUrl).then((data) => {
+	var person = new data();
+	person.handle()
 	return data
 });
 

@@ -1,7 +1,7 @@
 // import party_managment from './party_managment';
 
 class otwald {
-	constructor(){
+	constructor() {
 		const pm = party_managment;
 	}
 
