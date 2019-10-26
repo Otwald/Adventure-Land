@@ -3,18 +3,19 @@
 // If you don't know how to code, don't worry, It's easy.
 // Just set attack_mode to true and ENGAGE!
 loadScript = (name) => {
-	return $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
+	const result = await $.ajax('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js', {
 		type: 'Get',
 		dataType: "script",
 		async: false,
 		cache: true
 	});
+	return result
 }
 
 let name = 'otwald';
-loadScript(name)
+// loadScript(name)
 
-const otwald = require('https://cdn.jsdelivr.net/gh/Otwald/Adventure-Land/' + name + '.js');
+const otwald = await loadScript(name);
 
 main = (name, party) => {
 
