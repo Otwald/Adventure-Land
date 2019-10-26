@@ -22,7 +22,10 @@ async function getHash() {
 	return result
 }
 
-var resp = getHash().then((data) => { return data.commit.tree.sha })
+var resp = getHash().then((data) => {
+	console.log(data)
+	return data.commit.tree.sha
+})
 
 const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 	+ resp + '/' + name + '.js'
@@ -30,7 +33,10 @@ console.log(typeof (resp))
 
 
 
-const otwald = loadScript(baseUrl).then((data) => { return data });
+const otwald = loadScript(baseUrl).then((data) => {
+	console.log(data)
+	return data
+});
 console.log(otwald);
 console.log(typeof (otwald));
 
@@ -59,5 +65,4 @@ main = (name, party = []) => {
 
 } // Loops every 1/4 seconds.
 
-console.log(resp.commit.tree.sha)
 main(name);
