@@ -11,7 +11,24 @@ required = (name) => {
 	});
 }
 
+const base_url = 'https://raw.githubusercontent.com/Otwald/Adventure-Land/master'
+
+loadLink = (url) => {
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", url, true);
+	xhttp.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			var script = this.response
+			eval.apply(window, [script])
+		}
+	};
+	xhttp.send();
+}
 const name = window.character.name;
+
+loadLink(base_url + name + '.js');
+
+
 const party = ['Rukja', 'Alrinea', 'Umeko'];
 const alrinea = required('alrinea');
 console.log(alrinea)
