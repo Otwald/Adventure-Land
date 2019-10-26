@@ -5,7 +5,7 @@
 function loadScript(baseUrl) {
 	return $.ajax(baseUrl, {
 		type: 'Get',
-		dataType: "script",
+		dataType: "text",
 		cache: true,
 		async: false
 	});
@@ -31,8 +31,9 @@ const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
 
 const response = loadScript(baseUrl);
 console.log(response);
-var person = response.done()
-console.log(person);
+var person = response.responseTEXT
+console.log(eval(person))
+// console.log(person);
 // otwald.handle()
 // var person = JSON.parse(otwald.responseText);
 // person.handle();
