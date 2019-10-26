@@ -13,30 +13,30 @@ required = (name) => {
 
 const base_url = 'https://raw.githubusercontent.com/Otwald/Adventure-Land/master/'
 
-var test;
+// var test;
 
-loadLink = (url) => {
-	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", url, true);
-	xhttp.onreadystatechange = function () {
-		if (this.readyState == 4 && this.status == 200) {
-			var script = this.response;
-			test = script;
-			eval.apply(window, [script])
-		}
-	};
-	xhttp.send();
-}
-const name = window.character.name;
+// loadLink = (url) => {
+// 	var xhttp = new XMLHttpRequest();
+// 	xhttp.open("GET", url, true);
+// 	xhttp.onreadystatechange = function () {
+// 		if (this.readyState == 4 && this.status == 200) {
+// 			var script = this.response;
+// 			test = script;
+// 			eval.apply(window, [script])
+// 		}
+// 	};
+// 	xhttp.send();
+// }
+// const name = window.character.name;
 
-loadLink(base_url + name.toLowerCase() + '.js');
+// loadLink(base_url + name.toLowerCase() + '.js');
 
-console.log(test);
+// console.log(test);
 
 const party = ['Rukja', 'Alrinea', 'Umeko'];
 const alrinea = required('alrinea');
-console.log(alrinea)
-console.log(typeof(alrinea))
+// console.log(alrinea)
+// console.log(typeof (alrinea))
 let otwald = required('otwald');
 otwald = new otwald();
 let umeko = required('umeko');

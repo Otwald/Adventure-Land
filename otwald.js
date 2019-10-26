@@ -1,6 +1,10 @@
 import party_managment from './party_managment';
 const pm = party_managment;
 export default class otwald {
+	constructor(){
+		
+	}
+
 	find_item = (name) => {
 		var inventar = character.items
 		for (var item in inventar) {
