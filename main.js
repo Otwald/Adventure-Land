@@ -18,11 +18,11 @@ async function main(resp) {
 	}
 	let name = character.name;
 
-	const res = await require(name.toLowerCase());
-	console.log(res);
-	console.log(typeof (res));
-	let person = new $name();
-	person.handle();
+	// const res = await require(name.toLowerCase());
+	// console.log(res);
+	// console.log(typeof (res));
+	// let person = new $name();
+	// person.handle();
 	let res = await test();
 	console.log(res);
 	
