@@ -8,7 +8,8 @@ async function main(resp) {
 		return result;
 	}
 
-	let name = character.name;
+	let name = window.character.id;
+	console.log(name)
 	await require('basecharacter');
 	await require(name.toLowerCase());
 	let person = new $name();

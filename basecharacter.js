@@ -6,7 +6,7 @@ class BaseCharakter {
                 return char.name
             }
         });
-        if (member && (character.id == member)) {
+        if (member && (window.character.id == member)) {
             private_say(member, 'Online');
         }
     }
@@ -15,7 +15,7 @@ class BaseCharakter {
         if (window.partybuild === undefined) {
             window.partybuild = []
         }
-        game_chats.forEach((msg) => {
+        window.game_chats.forEach((msg) => {
             if (parent.X.characters.forEach((char) => {
                 if (char.name == msg[0]) {
                     return true;
