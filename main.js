@@ -1,5 +1,5 @@
-async function main(resp) {
-	async function require(baseUrl) {
+async function main(baseUrl) {
+	async function require(name) {
 		const result = await $.ajax(baseUrl + name + '.js', {
 			type: 'Get',
 			dataType: "script",
@@ -9,13 +9,13 @@ async function main(resp) {
 	}
 
 	let name = window.character.id;
-	console.log(name)
+	console.log(baseUrl);
 	await require('basecharacter');
 	let res = await require(name.toLowerCase());
 	console.log(res);
-	let person = new name();
+	let person = new $name();
 	person.handle();
 	
 
 }
-main(resp);
+main(baseUrl);
