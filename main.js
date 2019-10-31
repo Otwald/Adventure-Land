@@ -23,8 +23,8 @@ async function main(resp) {
 	console.log(typeof (res));
 	let person = new $name();
 	person.handle();
-	let test = await test();
-	console.log(test);
+	let res = await test();
+	console.log(res);
 	
 
 }
