@@ -11,9 +11,9 @@ async function main(resp) {
 	let name = window.character.id;
 	console.log(name)
 	await require('basecharacter');
-	await require(name.toLowerCase());
-	let person = new $name();
-	console.log(name)
+	let res = await require(name.toLowerCase());
+	console.log(res);
+	let person = new name();
 	person.handle();
 	
 
