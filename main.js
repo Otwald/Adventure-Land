@@ -9,18 +9,22 @@ async function main(baseUrl) {
 	// 	return result;
 	// }
 
+	function require(name) {
+		var imported = document.createElement('script');
+		imported.src = baseUrl + name + '.js';
+		document.head.appendChild(imported);
+	}
 
-	
+
+
 	let name = window.character.id;
-	var imported = document.createElement('script');
-	imported.src = baseUrl + name.toLowerCase() + '.js';
-	document.head.appendChild(imported);
-	// await require('basecharacter');
-	// let res = await require(name.toLowerCase());
-	// console.log(res);
-	let person = new window[name];
-	person.handle();
-	
+
+	require('basecharacter');
+	let res = require(name.toLowerCase());
+	console.log(window[name]);
+	// let person = new window[name];
+	// person.handle();
+
 
 }
 main(baseUrl);
