@@ -11,7 +11,6 @@ async function main(baseUrl) {
 	let name = window.character.id;
 	await require('basecharacter');
 	await require(name.toLowerCase());
-	console.log(res);
 	let person = window[name];
 	person.handle();
 	
