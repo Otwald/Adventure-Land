@@ -10,9 +10,9 @@ async function main(baseUrl) {
 
 	let name = window.character.id;
 	await require('basecharacter');
-	let res = await require(name.toLowerCase());
+	await require(name.toLowerCase());
 	console.log(res);
-	let person = window[name]();
+	let person = window[name];
 	person.handle();
 	
 
