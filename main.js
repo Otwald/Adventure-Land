@@ -8,7 +8,7 @@ async function main(baseUrl) {
 	// 	console.log(result);
 	// 	return result;
 	// }
-	import Otwald from baseUrl + name + '.js';
+	// import Otwald from baseUrl + name + '.js';
 	function require(name) {
 		var imported = document.createElement('script');
 		imported.src = baseUrl + name + '.js';
@@ -29,4 +29,16 @@ async function main(baseUrl) {
 
 
 }
-main(baseUrl);
+export default main;
+
+// loadLink = (url) => {
+// 	var xhttp = new XMLHttpRequest();
+// 	xhttp.open("GET",baseUrl + url + '.js' , true);
+// 	xhttp.onreadystatechange = function () {
+// 		if (this.readyState == 4 && this.status == 200) {
+// 			var script = this.response
+// 			eval.apply(window, [script])
+// 		}
+// 	};
+// 	xhttp.send();
+// }
