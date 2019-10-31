@@ -22,6 +22,7 @@ async function main(baseUrl) {
 	require('basecharacter');
 	require(name.toLowerCase());
 	console.log(window[name]);
+	console.log(document.head);
 	// const person = new Alrinea();
 	// person.handle();
 	const person2 = new {name}();
