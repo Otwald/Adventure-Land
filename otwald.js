@@ -1,4 +1,4 @@
-class Otwald {
+class Otwald extends BaseCharakter {
 
 	find_item = (name) => {
 		var inventar = character.items
@@ -58,31 +58,31 @@ class Otwald {
 	}
 
 
-	handle = (party) => {
-		var party_obj = pm.get_party(party);
-		var sell = ["helmet", "shoes", "gloves", "pants", "coat", "blade", "claw", "staff"]
-		var upgrade = true
-		var item = null
+	handle() {
+
+		// var sell = ["helmet", "shoes", "gloves", "pants", "coat", "blade", "claw", "staff"]
+		// var upgrade = true
+		// var item = null
 		setInterval(function () {
-			pm.party_build()
-			if (upgrade) {
-				if (!is_moving(character)) {
-					if (!item) { item = sell.pop() }
-					(go_upgrade(item) ? item = null : "");
-					if (sell.length == 0) { upgrade = false }
-				}
-			}
+			// pm.party_build()
+			// if (upgrade) {
+			// 	if (!is_moving(character)) {
+			// 		if (!item) { item = sell.pop() }
+			// 		(go_upgrade(item) ? item = null : "");
+			// 		if (sell.length == 0) { upgrade = false }
+			// 	}
+			// }
 
 
-			var chat = parent.game_chats;
-			var chat = chat[chat.length - 1];
-			if (chat) {
-				if (chat[0] !== "Otwald") {
-					return parent.party_say("fight")
-				}
-			}
-			pm.party_build()
-
+			// var chat = parent.game_chats;
+			// var chat = chat[chat.length - 1];
+			// if (chat) {
+			// 	if (chat[0] !== "Otwald") {
+			// 		return parent.party_say("fight")
+			// 	}
+			// }
+			// pm.party_build()
+			super.listenForCharacter();
 		}, 1000 / 2);
 	};
 }

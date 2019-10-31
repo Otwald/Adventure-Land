@@ -8,23 +8,12 @@ async function main(resp) {
 		return result;
 	}
 
-	async function test() {
-		const result = await $.ajax('https://adventure.land/api/servers_and_characters', {
-			type: 'Get',
-			dataType: "json",
-			cache: true,
-		});
-		return result;
-	}
 	let name = character.name;
-
-	// const res = await require(name.toLowerCase());
-	// console.log(res);
-	// console.log(typeof (res));
-	// let person = new $name();
-	// person.handle();
-	let res = await test();
-	console.log(res);
+	await require('basecharacter');
+	await require(name.toLowerCase());
+	let person = new $name();
+	person.handle();
+	let test = await 
 	
 
 }

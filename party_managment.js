@@ -4,17 +4,7 @@
 // Just set attack_mode to true and ENGAGE!
 export default class party_managment {
 
-    party_build = (party) => {
-        if (character.party != 'Otwald') {
-            parent.socket.emit("party", { event: "leave" });
-        }
-        if (parent.party_list.length < 4) {
-            var party = ['Rukja', 'Umeko', 'Alrinea'];
-            party.forEach(function (key) {
-                send_party_invite(key);
-            })
-        }
-    }
+    
 
     rejoin_party = () => {
         if (character.party != 'Otwald') {
