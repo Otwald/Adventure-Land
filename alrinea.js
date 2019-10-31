@@ -1,3 +1,8 @@
+function require(name) {
+	var imported = document.createElement('script');
+	imported.src = baseUrl + name + '.js';
+	document.head.appendChild(imported);
+}
 require('basecharacter');
 class Alrinea extends BaseCharakter {
 	handle() {
