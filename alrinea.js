@@ -1,4 +1,4 @@
-class Alrinea extends BaseCharakter {
+export class Alrinea extends BaseCharakter {
 	handle() {
 		console.log('before register');
 		super.registerAtMerchant();

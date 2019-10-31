@@ -1,11 +1,11 @@
 async function main(baseUrl) {
 	async function require(name) {
-		console.log(baseUrl + name + '.js')
 		const result = await $.ajax(baseUrl + name + '.js', {
 			type: 'Get',
 			dataType: "script",
 			cache: true,
 		});
+		console.log(result);
 		return result;
 	}
 
