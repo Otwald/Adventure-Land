@@ -8,7 +8,7 @@ async function main(baseUrl) {
 	// 	console.log(result);
 	// 	return result;
 	// }
-
+	import Otwald from baseUrl + name + '.js';
 	function require(name) {
 		var imported = document.createElement('script');
 		imported.src = baseUrl + name + '.js';
@@ -22,7 +22,7 @@ async function main(baseUrl) {
 	require('basecharacter');
 	require(name.toLowerCase());
 
-	import Otwald from baseUrl + name + '.js';
+	
 	console.log(document.head);
 	const person = new Otwald();
 	console.log(person);

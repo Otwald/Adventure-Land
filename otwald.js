@@ -1,4 +1,4 @@
-export default class Otwald extends BaseCharakter {
+class Otwald {
 
 	find_item = (name) => {
 		var inventar = character.items
@@ -86,3 +86,5 @@ export default class Otwald extends BaseCharakter {
 		// }, 1000 / 2);
 	};
 }
+
+export default Otwald;

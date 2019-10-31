@@ -1,4 +1,4 @@
-export default class BaseCharakter {
+class BaseCharakter {
 
     registerAtMerchant() {
         let member = parent.X.characters.forEach((char) => {
@@ -28,3 +28,5 @@ export default class BaseCharakter {
         })
     }
 }
+
+export default BaseCharakter;
