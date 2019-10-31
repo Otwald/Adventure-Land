@@ -1,4 +1,4 @@
-async function main(baseUrl) {
+function main(baseUrl) {
 	// async function require(name) {
 	// 	const result = await $.ajax(baseUrl + name + '.js', {
 	// 		type: 'Get',
