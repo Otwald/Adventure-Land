@@ -12,7 +12,7 @@ async function main(baseUrl) {
 	await require('basecharacter');
 	let res = await require(name.toLowerCase());
 	console.log(res);
-	let person = new {name}();
+	let person = window[name]();
 	person.handle();
 	
 
