@@ -1,8 +1,6 @@
 async function main(resp) {
-
-
-	async function loadScript(baseUrl) {
-		const result = await $.ajax(baseUrl, {
+	async function require(baseUrl) {
+		const result = await $.ajax(baseUrl + name + '.js', {
 			type: 'Get',
 			dataType: "script",
 			cache: true,
@@ -10,54 +8,24 @@ async function main(resp) {
 		return result;
 	}
 
-	let name = 'otwald';
+	async function test() {
+		const result = await $.ajax('https://adventure.land/api/servers_and_characters', {
+			type: 'Get',
+			dataType: "json",
+			cache: true,
+		});
+		return result;
+	}
+	let name = character.name;
 
-
-	const baseUrl = 'https://raw.githack.com/Otwald/Adventure-Land/'
-		+ resp + '/' + name + '.js'
-
-	const res = await loadScript(baseUrl);
+	const res = await require(name.toLowerCase());
 	console.log(res);
-	console.log(typeof(res));
-	var person = new Otwald();
+	console.log(typeof (res));
+	let person = new $name();
 	person.handle();
-	// const person = new Otwald();
-	// console.log(person);
-	// const response = loadScript(baseUrl);
-	// console.log(response);
-	// var person = '"(' + response.responseText + ')"'
-	// console.log(person);
-	// console.log(eval(person))
-	// console.log(person);
-	// otwald.handle()
-	// var person = JSON.parse(otwald.responseText);
-	// person.handle();
+	let test = await test();
+	console.log(test);
+	
 
-	// var person = new otwald();
-	// person.handle();
-	// main = (name, party = []) => {
-
-	// 	//base_attack(true);
-	// 	switch (name) {
-	// 		case 'Alrinea':
-	// 			game_log('Alrinea loop');
-	// 			alrinea.handle();
-	// 			break;
-	// 		case 'Otwald':
-	// 			game_log('Otwald loop');
-	// 			otwald.handle(party);
-	// 			break;
-	// 		case 'Umeko':
-	// 			game_log('Umeko loop');
-	// 			umeko.handle(party);
-	// 			break;
-	// 		case 'Rukja':
-	// 			game_log('Rukja loop');
-	// 			rukja.handle();
-	// 			break;
-	// 	}
-	// 	performance_trick();
-
-	// } // Loops every 1/4 seconds.
 }
 main(resp);
