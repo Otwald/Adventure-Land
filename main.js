@@ -20,10 +20,12 @@ async function main(baseUrl) {
 	let name = window.character.id;
 
 	require('basecharacter');
-	let res = require(name.toLowerCase());
+	require(name.toLowerCase());
 	console.log(window[name]);
-	// let person = new window[name];
-	// person.handle();
+	const person = new Alrinea();
+	person.handle();
+	const person2 = new {name}();
+	person2.handle();
 
 
 }
