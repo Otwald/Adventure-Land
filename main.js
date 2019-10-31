@@ -22,7 +22,7 @@ async function main(baseUrl) {
 	require('basecharacter');
 	require(name.toLowerCase());
 	console.log(document.head);
-	const person = new Otwald();
+	const person = Otwald;
 	console.log(person);
 
 
