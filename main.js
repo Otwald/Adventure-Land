@@ -12,8 +12,8 @@ async function main(resp) {
 	await require('basecharacter');
 	await require(name.toLowerCase());
 	let person = new $name();
+	console.log(name)
 	person.handle();
-	let test = await 
 	
 
 }

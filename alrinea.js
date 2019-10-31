@@ -1,5 +1,6 @@
 class Alrinea extends BaseCharakter {
 	handle() {
+		console.log('before register');
 		super.registerAtMerchant();
 		// var command = null
 		// var old_com = null
