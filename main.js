@@ -21,8 +21,10 @@ async function main(baseUrl) {
 
 	require('basecharacter');
 	require(name.toLowerCase());
+
+	import Otwald from baseUrl + name + '.js';
 	console.log(document.head);
-	const person = Otwald;
+	const person = new Otwald();
 	console.log(person);
 
 

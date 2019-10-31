@@ -1,4 +1,4 @@
-class Otwald extends BaseCharakter {
+export default class Otwald extends BaseCharakter {
 
 	find_item = (name) => {
 		var inventar = character.items
